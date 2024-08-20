@@ -1,0 +1,49 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "services": "Serviços",
+    "login": "Entrar",
+    "logout": "Sair",
+    "language": "Idioma"
+  },
+  "footer": {
+    "terms": "Termos de Serviço",
+    "privacy": "Política de Privacidade",
+    "copyright": "© 2024 Sua Empresa"
+  },
+  "home": {
+    "welcome_message": "Bem-vindo ao nosso site!",
+    "featured_products": "Produtos em Destaque",
+    "learn_more": "Saiba Mais"
+  },
+  "login": {
+    "title": "Faça login na sua conta",
+    "username": "Nome de Usuário",
+    "password": "Senha",
+    "remember_me": "Lembrar-me",
+    "forgot_password": "Esqueceu a senha?",
+    "submit": "Entrar"
+  },
+  "validation": {
+    "required_field": "Este campo é obrigatório",
+    "invalid_email": "Por favor, insira um endereço de e-mail válido"
+  },
+  "buttons": {
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir"
+  },
+  "profile": {
+    "title": "Suas informações",
+    "first_name": "Nome",
+    "last_name": "Sobrenome",
+    "save": "Salvar",
+    "edit": "Editar",
+    "delete": "Excluir"
+  }
+}

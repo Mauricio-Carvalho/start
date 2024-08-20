@@ -9,7 +9,8 @@
 
   .logo-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
   }
 
@@ -21,10 +22,6 @@
 
   nb-user {
     cursor: pointer;
-  }
-
-  ::ng-deep nb-search button {
-    padding: 0!important;
   }
 
   .header-container {
@@ -42,13 +39,24 @@
       }
     }
 
-    .logo {
+    .logo-client {
       padding: 0 1.25rem;
       font-size: 1.75rem;
-      @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
-      @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
       white-space: nowrap;
       text-decoration: none;
+      @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
+      @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
+    }
+
+    .logo-enterprise {
+      padding: 0 1.25rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      white-space: nowrap;
+      text-decoration: none;
+      //margin-top: 0.5rem;
+      @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
+      @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
     }
   }
 
