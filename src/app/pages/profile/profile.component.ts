@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService} from '@nebular/theme';
+import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 import { UserData } from '../../@core/data/users';
 import { LayoutService } from '../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-profile',
@@ -22,6 +23,23 @@ export class ProfileComponent  implements OnInit, OnDestroy {
   heartRate = 4;
   radioGroupValue = 'This is value 2';
 
+  languages = [
+    {
+      value: 'en',
+      name: 'English',
+    },
+    {
+      value: 'es',
+      name: 'Spanish',
+    },
+    {
+      value: 'pt',
+      name: 'Portuguese',
+    },
+  ];
+
+  currentLanguage = 'en';
+
   themes = [
     {
       value: 'default',
@@ -37,11 +55,12 @@ export class ProfileComponent  implements OnInit, OnDestroy {
     },
   ];
 
-  currentTheme = 'corporate';
+  currentTheme = 'dark';
 
   userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
 
-  constructor(private sidebarService: NbSidebarService,
+  constructor(private translate: TranslateService,
+              private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private themeService: NbThemeService,
               private userService: UserData,
@@ -50,6 +69,7 @@ export class ProfileComponent  implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    this.translate.setDefaultLang(this.currentLanguage);
     this.currentTheme = this.themeService.currentTheme;
 
     const { xl } = this.breakpointService.getBreakpointsMap();
@@ -66,6 +86,7 @@ export class ProfileComponent  implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe(themeName => this.currentTheme = themeName);
+
   }
 
   ngOnDestroy() {
@@ -75,5 +96,9 @@ export class ProfileComponent  implements OnInit, OnDestroy {
 
   changeTheme(themeName: string) {
     this.themeService.changeTheme(themeName);
+  }
+
+  changeLanguage(languageName: string) {
+    this.translate.use(languageName);
   }
 }

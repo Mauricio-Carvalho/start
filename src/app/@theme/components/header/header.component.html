@@ -6,10 +6,13 @@
   </div>
   <div class="logo-container">
     <a class="logo-client" href="#" (click)="navigateHome()">Start</a>
-    <a class="logo-enterprise">Excalibur Quantum</a>
+    <div class="logo-enterprise">
+      <div class="typewriter">
+        <a>{{ displayedText }}</a>
+      </div>
+    </div>
   </div>
 </div>
-
 <div class="header-container">
   <nb-actions size="small">
     <nb-action class="control-item" icon="email-outline"></nb-action>

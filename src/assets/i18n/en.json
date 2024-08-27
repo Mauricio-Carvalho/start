@@ -1,49 +1,36 @@
 {
-  "header": {
-    "home": "Home",
-    "about": "About Us",
-    "contact": "Contact",
-    "services": "Services",
-    "login": "Login",
-    "logout": "Logout",
-    "language": "Language"
-  },
-  "footer": {
-    "terms": "Terms of Service",
-    "privacy": "Privacy Policy",
-    "copyright": "© 2024 Your Company"
-  },
-  "home": {
-    "welcome_message": "Welcome to our website!",
-    "featured_products": "Featured Products",
-    "learn_more": "Learn More"
-  },
-  "login": {
-    "title": "Login to your account",
-    "username": "Username",
-    "password": "Password",
-    "remember_me": "Remember Me",
-    "forgot_password": "Forgot Password?",
-    "submit": "Login"
-  },
-  "validation": {
-    "required_field": "This field is required",
-    "invalid_email": "Please enter a valid email address"
-  },
-  "buttons": {
-    "submit": "Submit",
-    "cancel": "Cancel",
-    "close": "Close",
-    "save": "Save",
-    "edit": "Edit",
-    "delete": "Delete"
-  },
   "profile": {
-  "title": "Your Information",
-  "first_name": "Name",
-  "last_name": "Last Name",
-  "save": "Salvar",
-  "edit": "Editar",
-  "delete": "Excluir"
-}
+    "information": {
+      "title_information": "Your Information",
+      "first_name": "Name",
+      "last_name": "Last Name",
+      "date_birth": "Date of birth",
+      "sex": "Sex",
+      "type_document": "Type Document",
+      "document": "Document",
+      "id_position": "ID Position",
+      "position": "Position"
+    },
+    "configuration": {
+      "title_configuration": "Configuration",
+      "theme": "Theme",
+      "language": "Language"
+    },
+    "contact": {
+      "title_contact": "Contact",
+      "email": "Email",
+      "telephone": "Telephone",
+      "country": "Country",
+      "state": "State",
+      "city": "City",
+      "address": "Address",
+      "number": "Number"
+    },
+    "permission": {
+      "permission_title": "Permission",
+      "administrator": "Administrator",
+      "manager": "Manager",
+      "employee": "Employee"
+    }
+  }
 }

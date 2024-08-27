@@ -14,6 +14,7 @@ import {
 import { ThemeModule } from '../../@theme/theme.module';
 import { ProfileComponent } from './profile.component';
 import { FormsModule as ngFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { FormsModule as ngFormsModule } from '@angular/forms';
     NbSelectModule,
     NbIconModule,
     ngFormsModule,
+    TranslateModule,
   ],
   declarations: [
     ProfileComponent,

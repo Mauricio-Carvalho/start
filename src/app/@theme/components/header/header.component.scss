@@ -75,4 +75,22 @@
       display: none;
     }
   }
+
+
+  //-----Efeito-----//
+  .typewriter a {
+    display: inline;
+    font-size: 0.8rem;
+    border-right: 4px solid #61dafb; /* Cursor color */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink 0.75s step-end infinite;
+  }
+
+  @keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: #61dafb; }
+  }
+  //-----fim efeito-----//
+
 }

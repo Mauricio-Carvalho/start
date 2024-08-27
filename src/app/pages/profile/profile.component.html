@@ -1,36 +1,40 @@
 <div class="row">
   <div class="col-lg-6">
     <nb-card>
-      <nb-card-header>Your Information</nb-card-header>
+      <nb-card-header>{{ 'profile.information.title_information' | translate }}</nb-card-header>
       <nb-card-body>
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="inputFirstName" class="label">First Name</label>
-              <input type="text" nbInput fullWidth shape="semi-round" id="inputFirstName" placeholder="First Name">
+              <label for="inputFirstName" class="label">{{ 'profile.information.first_name' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round" id="inputFirstName"
+                     placeholder="{{ 'profile.information.first_name' | translate }}">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label for="inputLastName" class="label">Last Name</label>
-              <input type="text" nbInput fullWidth shape="semi-round" id="inputLastName" placeholder="Last Name">
+              <label for="inputLastName" class="label">{{ 'profile.information.last_name' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round" id="inputLastName"
+                     placeholder="{{ 'profile.information.last_name' | translate }}">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">Date of birth</label>
-              <input nbInput fullWidth shape="semi-round" placeholder="Date of birth" [nbDatepicker]="formpicker"> <nb-datepicker #formpicker></nb-datepicker>
+              <label class="label">{{ 'profile.information.date_birth' | translate }}</label>
+              <input nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.information.date_birth' | translate }}" [nbDatepicker]="formpicker">
+              <nb-datepicker #formpicker></nb-datepicker>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">Sex</label>
-              <nb-select fullWidth shape="semi-round" placeholder="Sex">
-                <nb-option value="1">Male</nb-option>
-                <nb-option value="2">Female</nb-option>
-                <nb-option value="3">Other</nb-option>
+              <label class="label">{{ 'profile.information.sex' | translate }}</label>
+              <nb-select fullWidth shape="semi-round" placeholder="{{ 'profile.information.sex' | translate }}">
+                <nb-option value="1">{{ 'profile.permission.administrator' | translate }}</nb-option>
+                <nb-option value="2">{{ 'profile.permission.manager' | translate }}</nb-option>
+                <nb-option value="3">{{ 'profile.permission.employee' | translate }}</nb-option>
               </nb-select>
             </div>
           </div>
@@ -38,8 +42,9 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="label">Type Document</label>
-              <nb-select fullWidth shape="semi-round" placeholder="Type Document">
+              <label class="label">{{ 'profile.information.type_document' | translate }}</label>
+              <nb-select fullWidth shape="semi-round"
+                         placeholder="{{ 'profile.information.type_document' | translate }}">
                 <nb-option value="1">CPF</nb-option>
                 <nb-option value="2">CNPJ</nb-option>
               </nb-select>
@@ -47,22 +52,25 @@
           </div>
           <div class="col-sm-8">
             <div class="form-group">
-              <label class="label">Document</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Document">
+              <label class="label">{{ 'profile.information.document' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.information.document' | translate }}">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="label">ID Position</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="ID Position">
+              <label class="label">{{ 'profile.information.id_position' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.information.id_position' | translate }}">
             </div>
           </div>
           <div class="col-sm-8">
             <div class="form-group">
-              <label class="label">Position</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Position">
+              <label class="label">{{ 'profile.information.position' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.information.position' | translate }}">
             </div>
           </div>
         </div>
@@ -70,53 +78,60 @@
     </nb-card>
 
     <nb-card>
-      <nb-card-header>Contact</nb-card-header>
+      <nb-card-header>{{ 'profile.contact.title_contact' | translate }}</nb-card-header>
       <nb-card-body>
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">Email</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Email">
+              <label class="label">{{ 'profile.contact.email' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.email' | translate }}">
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">Telephone</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Telephone">
+              <label class="label">{{ 'profile.contact.telephone' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.telephone' | translate }}">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="label">Country</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Country">
+              <label class="label">{{ 'profile.contact.country' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.country' | translate }}">
             </div>
           </div>
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="label">State</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="State">
+              <label class="label">{{ 'profile.contact.state' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.state' | translate }}">
             </div>
           </div>
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="label">City</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="City">
+              <label class="label">{{ 'profile.contact.city' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.city' | translate }}">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-8">
             <div class="form-group">
-              <label class="label">Address</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Address">
+              <label class="label">{{ 'profile.contact.address' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.address' | translate }}">
             </div>
           </div>
           <div class="col-sm-4">
             <div class="form-group">
-              <label class="label">Number</label>
-              <input type="text" nbInput fullWidth shape="semi-round" placeholder="Number">
+              <label class="label">{{ 'profile.contact.number' | translate }}</label>
+              <input type="text" nbInput fullWidth shape="semi-round"
+                     placeholder="{{ 'profile.contact.number' | translate }}">
             </div>
           </div>
         </div>
@@ -126,24 +141,24 @@
 
   <div class="col-lg-6">
     <nb-card>
-      <nb-card-header>Configuration</nb-card-header>
+      <nb-card-header>{{ 'profile.configuration.title_configuration' | translate }}</nb-card-header>
       <nb-card-body>
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">Theme</label>
-                <nb-select fullWidth shape="semi-round" [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
-                  <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
-                </nb-select>
+              <label class="label">{{ 'profile.configuration.theme' | translate }}</label>
+              <nb-select fullWidth shape="semi-round" [selected]="currentTheme" (selectedChange)="changeTheme($event)"
+                         status="primary">
+                <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+              </nb-select>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">Language</label>
-              <nb-select fullWidth shape="semi-round" placeholder="Language">
-                <nb-option value="en">English</nb-option>
-                <nb-option value="es">Spanish</nb-option>
-                <nb-option value="pt">Portuguese</nb-option>
+              <label class="label">{{ 'profile.configuration.language' | translate }}</label>
+              <nb-select fullWidth shape="semi-round" [selected]="currentLanguage"
+                         (selectedChange)="changeLanguage($event)" status="primary">
+                <nb-option *ngFor="let language of languages" [value]="language.value"> {{ language.name }}</nb-option>
               </nb-select>
             </div>
           </div>
@@ -152,26 +167,22 @@
     </nb-card>
 
     <nb-card>
-      <nb-card-header>Permission</nb-card-header>
+      <nb-card-header>{{ 'profile.permission.permission_title' | translate }}</nb-card-header>
       <nb-card-body class="checkbox-radio">
         <div class="demo-items">
           <nb-radio-group [(value)]="radioGroupValue">
-            <nb-radio
-              [value]="1">
-              Administrator
+            <nb-radio [value]="1">
+              {{ 'profile.permission.administrator' | translate }}
             </nb-radio>
-            <nb-radio
-              [value]="2">
-              Manager
+            <nb-radio [value]="2">
+              {{ 'profile.permission.manager' | translate }}
             </nb-radio>
-            <nb-radio
-              [value]="3">
-              Employee
+            <nb-radio [value]="3">
+              {{ 'profile.permission.employee' | translate }}
             </nb-radio>
           </nb-radio-group>
         </div>
       </nb-card-body>
     </nb-card>
-
   </div>
 </div>

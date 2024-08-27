@@ -21,6 +21,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
 
+  text = 'Excalibur Quantum';
+  displayedText = '';
+  index = 0;
+  typingSpeed = 100; // Speed of typing in milliseconds
+
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private themeService: NbThemeService,
@@ -31,7 +36,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-
+    this.typeWriter();
     this.userService.getUsers()
       .pipe(takeUntil(this.destroy$))
       .subscribe((users: any) => this.user = users.nick);
@@ -72,4 +77,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.router.navigate(['/pages/profile']);
     }
   }
+
+  typeWriter() {
+    if (this.index < this.text.length) {
+      this.displayedText += this.text.charAt(this.index);
+      this.index++;
+      setTimeout(() => this.typeWriter(), this.typingSpeed);
+    }
+  }
+
 }

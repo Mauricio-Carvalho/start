@@ -1,41 +1,36 @@
 {
-  "header": {
-    "home": "Inicio",
-    "about": "Sobre Nosotros",
-    "contact": "Contacto",
-    "services": "Servicios",
-    "login": "Iniciar Sesión",
-    "logout": "Cerrar Sesión",
-    "language": "Idioma"
-  },
-  "footer": {
-    "terms": "Términos de Servicio",
-    "privacy": "Política de Privacidad",
-    "copyright": "© 2024 Tu Empresa"
-  },
-  "home": {
-    "welcome_message": "¡Bienvenido a nuestro sitio web!",
-    "featured_products": "Productos Destacados",
-    "learn_more": "Saber Más"
-  },
-  "login": {
-    "title": "Inicia sesión en tu cuenta",
-    "username": "Nombre de Usuario",
-    "password": "Contraseña",
-    "remember_me": "Recuérdame",
-    "forgot_password": "¿Olvidaste tu contraseña?",
-    "submit": "Iniciar Sesión"
-  },
-  "validation": {
-    "required_field": "Este campo es obligatorio",
-    "invalid_email": "Por favor, introduce una dirección de correo electrónico válida"
-  },
-  "buttons": {
-    "submit": "Enviar",
-    "cancel": "Cancelar",
-    "close": "Cerrar",
-    "save": "Guardar",
-    "edit": "Editar",
-    "delete": "Eliminar"
+  "profile": {
+    "information": {
+      "title_information": "Tu Información",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "date_birth": "Fecha de nacimiento",
+      "sex": "Sexo",
+      "type_document": "Tipo de Documento",
+      "document": "Documento",
+      "id_position": "ID de Posición",
+      "position": "Posición"
+    },
+    "configuration": {
+      "title_configuration": "Configuración",
+      "theme": "Tema",
+      "language": "Idioma"
+    },
+    "contact": {
+      "title_contact": "Contacto",
+      "email": "Correo electrónico",
+      "telephone": "Teléfono",
+      "country": "País",
+      "state": "Estado",
+      "city": "Ciudad",
+      "address": "Dirección",
+      "number": "Número"
+    },
+    "permission": {
+      "permission_title": "Permiso",
+      "administrator": "Administrador",
+      "manager": "Gerente",
+      "employee": "Empleado"
+    }
   }
 }
