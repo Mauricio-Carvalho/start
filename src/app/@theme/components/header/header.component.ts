@@ -1,12 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NbMediaBreakpointsService, NbMenuBag, NbMenuService, NbSidebarService, NbThemeService} from '@nebular/theme';
+import { NbMediaBreakpointsService, NbMenuBag, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
 import { Router } from '@angular/router';
-
 import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
-
 
 @Component({
   selector: 'ngx-header',
@@ -21,22 +19,34 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
 
-  text = 'Excalibur Quantum';
+  // Mensagens a serem exibidas
+  text1 = 'Excalibur Quantum';
+  text2 = 'Da Lenda à Inovação, Tecnologia que Transforma';
+
   displayedText = '';
   index = 0;
-  typingSpeed = 100; // Speed of typing in milliseconds
+  typingSpeed = 250; // Velocidade de digitação em milissegundos
+  deletingSpeed = 100; // Velocidade de exclusão em milissegundos
+  delayBeforeDeleting = 8000; // Atraso antes de iniciar a exclusão
+  isLogoEnterpriseVisible = true; // Variável para controlar a visibilidade da logo-enterprise
 
-  constructor(private sidebarService: NbSidebarService,
-              private menuService: NbMenuService,
-              private themeService: NbThemeService,
-              private userService: UserData,
-              private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService,
-              private router: Router) {
-  }
+  private hideLogoTimeout: any;
+  private typingTimeout: any;
+  private deletingTimeout: any;
+
+  constructor(
+    private sidebarService: NbSidebarService,
+    private menuService: NbMenuService,
+    private themeService: NbThemeService,
+    private userService: UserData,
+    private layoutService: LayoutService,
+    private breakpointService: NbMediaBreakpointsService,
+    private router: Router,
+  ) {}
 
   ngOnInit() {
-    this.typeWriter();
+    this.startTypingSequence();
+
     this.userService.getUsers()
       .pipe(takeUntil(this.destroy$))
       .subscribe((users: any) => this.user = users.nick);
@@ -57,12 +67,22 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+
+    // Limpar timeouts para evitar vazamentos de memória
+    if (this.typingTimeout) {
+      clearTimeout(this.typingTimeout);
+    }
+    if (this.deletingTimeout) {
+      clearTimeout(this.deletingTimeout);
+    }
+    if (this.hideLogoTimeout) {
+      clearTimeout(this.hideLogoTimeout);
+    }
   }
 
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
     this.layoutService.changeLayoutSize();
-
     return false;
   }
 
@@ -78,12 +98,36 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  typeWriter() {
-    if (this.index < this.text.length) {
-      this.displayedText += this.text.charAt(this.index);
+  startTypingSequence() {
+    this.displayedText = '';
+    this.index = 0;
+    this.typingTimeout = setTimeout(() => this.typeWriter(this.text1), 100);
+    this.hideLogoTimeout = setTimeout(() => this.hideLogoEnterprise(), 40000);
+  }
+
+  typeWriter(text: string) {
+    if (this.index < text.length) {
+      this.displayedText += text.charAt(this.index);
       this.index++;
-      setTimeout(() => this.typeWriter(), this.typingSpeed);
+      this.typingTimeout = setTimeout(() => this.typeWriter(text), this.typingSpeed);
+    } else {
+      this.typingTimeout = setTimeout(() => this.deleteText(text), this.delayBeforeDeleting);
     }
   }
 
+  deleteText(text: string) {
+    if (this.displayedText.length > 0) {
+      this.displayedText = this.displayedText.slice(0, -1);
+      this.deletingTimeout = setTimeout(() => this.deleteText(text), this.deletingSpeed);
+    } else {
+      if (text === this.text1) {
+        this.index = 0;
+        this.typingTimeout = setTimeout(() => this.typeWriter(this.text2), 100);
+      }
+    }
+  }
+
+  hideLogoEnterprise() {
+    this.isLogoEnterpriseVisible = false;
+  }
 }

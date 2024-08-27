@@ -46,6 +46,7 @@
       text-decoration: none;
       @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
       @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
+
     }
 
     .logo-enterprise {
@@ -57,6 +58,11 @@
       //margin-top: 0.5rem;
       @include nb-ltr(border-left, 1px solid nb-theme(divider-color));
       @include nb-rtl(border-right, 1px solid nb-theme(divider-color));
+
+      // Estilo para ocultar a div
+      &.hidden {
+        display: none;
+      }
     }
   }
 
@@ -84,13 +90,16 @@
     border-right: 4px solid #61dafb; /* Cursor color */
     white-space: nowrap;
     overflow: hidden;
-    animation: blink 0.75s step-end infinite;
+    animation: blink 0.75s step-end 0s 55; /* Duração do blink é 0.75s, e a animação ocorre apenas uma vez */
+    animation-duration: 1m; /* Define a duração total da animação para 1 minuto */
+    animation-fill-mode: forwards; /* Garante que o estilo final da animação seja aplicado após a conclusão */
   }
 
   @keyframes blink {
     from, to { border-color: transparent; }
     50% { border-color: #61dafb; }
   }
+
   //-----fim efeito-----//
 
 }

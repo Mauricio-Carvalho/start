@@ -5,8 +5,8 @@
     </a>
   </div>
   <div class="logo-container">
-    <a class="logo-client" href="#" (click)="navigateHome()">Start</a>
-    <div class="logo-enterprise">
+    <a class="logo-client" [ngClass]="{'full-width': !isLogoEnterpriseVisible}" href="#" (click)="navigateHome()">Start</a>
+    <div class="logo-enterprise" [ngClass]="{'hidden': !isLogoEnterpriseVisible}">
       <div class="typewriter">
         <a>{{ displayedText }}</a>
       </div>
