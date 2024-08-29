@@ -1,5 +1,8 @@
 {
   "profile": {
+    "perfil": {
+      "title_perfil": "Perfil"
+    },
     "information": {
       "title_information": "Tu Información",
       "first_name": "Nombre",

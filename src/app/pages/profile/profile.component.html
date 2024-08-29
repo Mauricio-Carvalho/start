@@ -141,6 +141,20 @@
 
   <div class="col-lg-6">
     <nb-card>
+      <nb-card-header>{{ 'profile.image.title_image' | translate }}</nb-card-header>
+      <nb-card-body>
+        <div class="row">
+          <div class="col-sm-6">
+            <nb-user size="large" name="Leonardo Camilo" title="Development" onlyPicture shape="rectangle"></nb-user>
+          </div>
+          <div class="col-sm-6 text-right">
+            <button nbButton shape="semi-round">Upload</button>
+          </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+
+    <nb-card>
       <nb-card-header>{{ 'profile.configuration.title_configuration' | translate }}</nb-card-header>
       <nb-card-body>
         <div class="row">
@@ -158,13 +172,14 @@
               <label class="label">{{ 'profile.configuration.language' | translate }}</label>
               <nb-select fullWidth shape="semi-round" [selected]="currentLanguage"
                          (selectedChange)="changeLanguage($event)" status="primary">
-                <nb-option *ngFor="let language of languages" [value]="language.value"> {{ language.name }}</nb-option>
+                <nb-option *ngFor="let language of languages" [value]="language.value">{{ language.name }}</nb-option>
               </nb-select>
             </div>
           </div>
         </div>
       </nb-card-body>
     </nb-card>
+
 
     <nb-card>
       <nb-card-header>{{ 'profile.permission.permission_title' | translate }}</nb-card-header>
