@@ -57,8 +57,6 @@ export class ProfileComponent  implements OnInit, OnDestroy {
 
   currentTheme = 'dark';
 
-  // userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
-
   constructor(private translate: TranslateService,
               private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
@@ -69,7 +67,10 @@ export class ProfileComponent  implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    const savedLanguage = localStorage.getItem('currentLanguage');
+    this.currentLanguage = savedLanguage ? savedLanguage : this.currentLanguage;
     this.translate.setDefaultLang(this.currentLanguage);
+
     this.currentTheme = this.themeService.currentTheme;
 
     const { xl } = this.breakpointService.getBreakpointsMap();
@@ -100,5 +101,7 @@ export class ProfileComponent  implements OnInit, OnDestroy {
 
   changeLanguage(languageName: string) {
     this.translate.use(languageName);
+    this.currentLanguage = languageName;
+    localStorage.setItem('currentLanguage', languageName);
   }
 }
