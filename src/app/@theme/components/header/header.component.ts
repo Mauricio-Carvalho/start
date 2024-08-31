@@ -5,6 +5,7 @@ import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'ngx-header',
@@ -17,11 +18,15 @@ export class HeaderComponent implements OnInit, OnDestroy {
   userPictureOnly: boolean = false;
   user: any;
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  userMenu = [
+    { title: 'header.profile' },
+    { title: 'header.log_out' },
+  ];
+
 
   // Mensagens a serem exibidas
-  text1 = 'Excalibur Quantum';
-  text2 = 'Da Lenda à Inovação, Tecnologia que Transforma';
+  enterprise = 'Excalibur Quantum';
+  slogan = 'Da Lenda à Inovação, Tecnologia que Transforma';
 
   displayedText = '';
   index = 0;
@@ -35,6 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private deletingTimeout: any;
 
   constructor(
+    private translate: TranslateService,
     private sidebarService: NbSidebarService,
     private menuService: NbMenuService,
     private themeService: NbThemeService,
@@ -51,17 +57,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe((users: any) => this.user = users.nick);
 
-    const { xl } = this.breakpointService.getBreakpointsMap();
-    this.themeService.onMediaQueryChange()
-      .pipe(
-        map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
-        takeUntil(this.destroy$),
-      )
-      .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
+    // const { xl } = this.breakpointService.getBreakpointsMap();
+    // this.themeService.onMediaQueryChange()
+    //   .pipe(
+    //     map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
+    //     takeUntil(this.destroy$),
+    //   )
+    //   .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
 
-    this.menuService.onItemClick()
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((event) => this.onMenuItemClick(event));
+    // this.menuService.onItemClick()
+    //   .pipe(takeUntil(this.destroy$))
+    //   .subscribe((event) => this.onMenuItemClick(event));
   }
 
   ngOnDestroy() {
@@ -91,25 +97,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return false;
   }
 
-  onMenuItemClick(event: NbMenuBag) {
-    const { item } = event;
-    if (item.title === 'Profile') {
-      this.router.navigate(['/pages/profile']);
-    }
-  }
+  // onMenuItemClick(event: NbMenuBag) {
+  //   const { item } = event;
+  //   if (item.link === 'profile') {
+  //     this.router.navigate(['/pages/profile']);
+  //   }
+  // }
 
   startTypingSequence() {
     this.displayedText = '';
     this.index = 0;
-    this.typingTimeout = setTimeout(() => this.typeWriter(this.text1), 100);
+    this.typingTimeout = setTimeout(() => this.writerText(this.enterprise), 100);
     this.hideLogoTimeout = setTimeout(() => this.hideLogoEnterprise(), 40000);
   }
 
-  typeWriter(text: string) {
+  writerText(text: string) {
     if (this.index < text.length) {
       this.displayedText += text.charAt(this.index);
       this.index++;
-      this.typingTimeout = setTimeout(() => this.typeWriter(text), this.typingSpeed);
+      this.typingTimeout = setTimeout(() => this.writerText(text), this.typingSpeed);
     } else {
       this.typingTimeout = setTimeout(() => this.deleteText(text), this.delayBeforeDeleting);
     }
@@ -120,9 +126,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.displayedText = this.displayedText.slice(0, -1);
       this.deletingTimeout = setTimeout(() => this.deleteText(text), this.deletingSpeed);
     } else {
-      if (text === this.text1) {
+      if (text === this.enterprise) {
         this.index = 0;
-        this.typingTimeout = setTimeout(() => this.typeWriter(this.text2), 100);
+        this.typingTimeout = setTimeout(() => this.writerText(this.slogan), 100);
       }
     }
   }

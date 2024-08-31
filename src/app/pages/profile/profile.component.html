@@ -160,19 +160,19 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">{{ 'profile.configuration.theme' | translate }}</label>
-              <nb-select fullWidth shape="semi-round" [selected]="currentTheme" (selectedChange)="changeTheme($event)"
-                         status="primary">
-                <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+              <label class="label">{{ 'profile.configuration.theme.title' | translate }}</label>
+              <nb-select fullWidth shape="semi-round" [selected]="currentTheme" placeholder="{{ 'profile.configuration.theme.title' | translate }}"
+                         (selectedChange)="changeTheme($event)" status="primary">
+                <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ 'profile.configuration.theme.' + theme.value | translate }}</nb-option>
               </nb-select>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="form-group">
-              <label class="label">{{ 'profile.configuration.language' | translate }}</label>
-              <nb-select fullWidth shape="semi-round" [selected]="currentLanguage"
+              <label class="label">{{ 'profile.configuration.language.title' | translate }}</label>
+              <nb-select fullWidth shape="semi-round" [selected]="currentLanguage"  placeholder="{{ 'profile.configuration.language.title' | translate }}"
                          (selectedChange)="changeLanguage($event)" status="primary">
-                <nb-option *ngFor="let language of languages" [value]="language.value">{{ language.name }}</nb-option>
+                <nb-option *ngFor="let language of languages" [value]="language.value">{{ 'profile.configuration.language.' + language.name | translate }}</nb-option>
               </nb-select>
             </div>
           </div>

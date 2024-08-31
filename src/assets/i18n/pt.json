@@ -1,4 +1,8 @@
 {
+  "header": {
+    "profile": "Perfil",
+    "log_out": "Sair"
+  },
   "profile": {
     "image": {
       "title_image": "Imagem"
@@ -21,8 +25,18 @@
     },
     "configuration": {
       "title_configuration": "Configuração",
-      "theme": "Tema",
-      "language": "Idioma"
+      "theme": {
+        "title": "Tema",
+        "default": "Claro",
+        "dark": "Escuro",
+        "corporate": "Corporativo"
+      },
+      "language": {
+        "title": "Idioma",
+        "english": "Inglês",
+        "spanish": "Espanhol",
+        "portuguese": "Português"
+      }
     },
     "contact": {
       "title_contact": "Contato",

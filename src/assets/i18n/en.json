@@ -1,23 +1,42 @@
 {
+  "header": {
+    "profile": "Profile",
+    "log_out": "Log Out"
+  },
   "profile": {
     "image": {
-      "title_image": "Imagem"
+      "title_image": "Image"
     },
     "information": {
       "title_information": "Your Information",
-      "first_name": "Name",
+      "first_name": "First Name",
       "last_name": "Last Name",
-      "date_birth": "Date of birth",
-      "sex": "Sex",
-      "type_document": "Type Document",
+      "date_birth": "Date of Birth",
+      "sex": {
+        "title": "Sex",
+        "masculine": "Male",
+        "feminine": "Female",
+        "other": "Other"
+      },
+      "type_document": "Document Type",
       "document": "Document",
-      "id_position": "ID Position",
+      "id_position": "Position ID",
       "position": "Position"
     },
     "configuration": {
       "title_configuration": "Configuration",
-      "theme": "Theme",
-      "language": "Language"
+      "theme": {
+        "title": "Theme",
+        "default": "Light",
+        "dark": "Dark",
+        "corporate": "Corporate"
+      },
+      "language": {
+        "title": "Language",
+        "english": "English",
+        "spanish": "Spanish",
+        "portuguese": "Portuguese"
+      }
     },
     "contact": {
       "title_contact": "Contact",

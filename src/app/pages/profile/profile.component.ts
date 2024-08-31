@@ -26,19 +26,19 @@ export class ProfileComponent  implements OnInit, OnDestroy {
   languages = [
     {
       value: 'en',
-      name: 'English',
+      name: 'english',
     },
     {
       value: 'es',
-      name: 'Spanish',
+      name: 'spanish',
     },
     {
       value: 'pt',
-      name: 'Portuguese',
+      name: 'portuguese',
     },
   ];
 
-  currentLanguage = 'en';
+  currentLanguage = 'pt';
 
   themes = [
     {
@@ -57,7 +57,7 @@ export class ProfileComponent  implements OnInit, OnDestroy {
 
   currentTheme = 'dark';
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  // userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
 
   constructor(private translate: TranslateService,
               private sidebarService: NbSidebarService,
