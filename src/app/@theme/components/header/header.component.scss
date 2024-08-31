@@ -91,7 +91,7 @@
     white-space: nowrap;
     overflow: hidden;
     animation: blink 0.75s step-end 0s 55; /* Duração do blink é 0.75s, e a animação ocorre apenas uma vez */
-    animation-duration: 60s; /* Define a duração total da animação para 1 minuto */
+    animation-duration: 1s; /* Define a duração total da animação para 1 minuto */
     animation-fill-mode: forwards; /* Garante que o estilo final da animação seja aplicado após a conclusão */
   }
 

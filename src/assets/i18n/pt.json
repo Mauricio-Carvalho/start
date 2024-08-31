@@ -8,7 +8,12 @@
       "first_name": "Nome",
       "last_name": "Sobrenome",
       "date_birth": "Data de nascimento",
-      "sex": "Sexo",
+      "sex": {
+        "title": "Sexo",
+        "masculine": "Masculino",
+        "feminine": "Feminino",
+        "other": "Outro"
+      },
       "type_document": "Tipo de Documento",
       "document": "Documento",
       "id_position": "ID da Posição",
