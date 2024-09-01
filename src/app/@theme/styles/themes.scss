@@ -1,7 +1,11 @@
 // @nebular theming framework
-@import '@nebular/theme/styles/theming';
+@forward '@nebular/theme/styles/theming';
 // @nebular out of the box themes
-@import '@nebular/theme/styles/themes';
+@use '@nebular/theme/styles/theming' as *;
+@use '@nebular/theme/styles/themes/dark';
+@use '@nebular/theme/styles/themes/default';
+@use '@nebular/theme/styles/themes/cosmic';
+@use '@nebular/theme/styles/themes/corporate';
 
 $nb-themes: nb-register-theme((
   layout-padding-top: 2.25rem,
@@ -45,26 +49,26 @@ $nb-themes: nb-register-theme((
   slide-out-shadow-color-rtl: -2px 0 3px #29157a,
 ), cosmic, cosmic);
 
-$nb-themes: nb-register-theme((
-  layout-padding-top: 2.25rem,
-
-  menu-item-icon-margin: 0 0.5rem 0 0,
-
-  card-height-tiny: 13.5rem,
-  card-height-small: 21.1875rem,
-  card-height-medium: 28.875rem,
-  card-height-large: 36.5625rem,
-  card-height-giant: 44.25rem,
-  card-margin-bottom: 1.875rem,
-  card-header-with-select-padding-top: 0.5rem,
-  card-header-with-select-padding-bottom: 0.5rem,
-
-  select-min-width: 6rem,
-
-  slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
-  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
-  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
-), corporate, corporate);
+//$nb-themes: nb-register-theme((
+//  layout-padding-top: 2.25rem,
+//
+//  menu-item-icon-margin: 0 0.5rem 0 0,
+//
+//  card-height-tiny: 13.5rem,
+//  card-height-small: 21.1875rem,
+//  card-height-medium: 28.875rem,
+//  card-height-large: 36.5625rem,
+//  card-height-giant: 44.25rem,
+//  card-margin-bottom: 1.875rem,
+//  card-header-with-select-padding-top: 0.5rem,
+//  card-header-with-select-padding-bottom: 0.5rem,
+//
+//  select-min-width: 6rem,
+//
+//  slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
+//  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+//  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+//), corporate, corporate);
 
 $nb-themes: nb-register-theme((
   layout-padding-top: 2.25rem,
@@ -86,3 +90,79 @@ $nb-themes: nb-register-theme((
   slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
   slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
 ), dark, dark);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 2.25rem,
+
+  menu-item-icon-margin: 0 0.5rem 0 0,
+
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+
+  select-min-width: 6rem,
+
+  // Cores básicas
+  color-basic-100: #77AF9A, // Cor de fundo : header e sidebar
+  color-basic-200: #77AF9A, // Cor para elementos secundários : forms
+  color-basic-300: #125C41, // Cor de fundo leve
+  color-basic-400: #125C41, // Cor de destaque suave : linhas input
+  //color-basic-500: #c7dbeb, // Cor de fundo para elementos destacados
+  color-basic-600: #125C41, // Cor para elementos de foco ou selecionados : label e placeholder
+  //color-basic-700: #4f969e, // Cor primária para botões e links
+  //color-basic-800: #336a77, // Cor para cabeçalhos ou seções destacadas
+  //color-basic-900: #295c66, // Cor para texto e ícones primários
+  //color-basic-1000: #244555, // Cor para fundo de seções secundárias
+  //color-basic-1100: #121a2b, // Cor de fundo escuro para contraste
+  //
+  //// Cores de fundo
+  //background-basic-color-1: color-basic-700, // Cor de fundo principal
+  //background-basic-color-2: color-basic-800, // Cor de fundo para áreas secundárias
+  //background-basic-color-3: color-basic-900, // Cor de fundo para elementos de destaque
+  //background-basic-color-4: color-basic-100, // Cor de fundo para áreas claras e contrastantes
+  //
+  //// Cores de borda
+  //border-basic-color-1: color-basic-700, // Cor da borda principal
+  //border-basic-color-2: color-basic-800, // Cor da borda para elementos secundários
+  //border-basic-color-3: color-basic-900, // Cor da borda para elementos de destaque
+  //border-basic-color-4: color-basic-1000, // Cor da borda para áreas secundárias
+  //border-basic-color-5: color-basic-1100, // Cor da borda para seções escuras e contrastantes
+  //
+  //// Cores de texto
+  //text-basic-color: color-basic-900, // Cor do texto principal
+  //text-disabled-color: color-basic-500, // Cor do texto desativado
+  //text-primary-color: color-basic-700, // Cor do texto primário para links e elementos interativos
+  //text-secondary-color: color-basic-600, // Cor do texto secundário e informações adicionais
+  //
+  //// Cores de botão
+  //button-background-basic-color: color-basic-700, // Cor de fundo dos botões principais
+  //button-background-hover-color: color-basic-600, // Cor de fundo dos botões ao passar o mouse
+  //button-background-active-color: color-basic-800, // Cor de fundo dos botões quando pressionados
+  //button-text-color: color-basic-100, // Cor do texto dos botões
+  //
+  //// Cores de estado
+  //status-success-color: #4CAF50, // Cor para estados de sucesso (verde)
+  //status-info-color: #2196F3, // Cor para estados de informação (azul)
+  //status-warning-color: #FFC107, // Cor para estados de aviso (amarelo)
+  //status-danger-color: #F44336, // Cor para estados de erro (vermelho)
+  //
+  //// Cores de input
+  //input-background-color: color-basic-100, // Cor de fundo dos campos de entrada
+  //input-border-color: color-basic-600, // Cor da borda dos campos de entrada
+  //input-placeholder-color: color-basic-400, // Cor do texto de placeholder
+  //
+  //// Cores de badge
+  //badge-primary-background-color: color-basic-700, // Cor de fundo para badges primários
+  //badge-primary-text-color: color-basic-100, // Cor do texto para badges primários
+  //badge-success-background-color: #4CAF50, // Cor de fundo para badges de sucesso
+  //badge-success-text-color: color-basic-100, // Cor do texto para badges de sucesso
+  //badge-danger-background-color: #F44336, // Cor de fundo para badges de erro
+  //badge-danger-text-color: color-basic-100, // Cor do texto para badges de erro
+
+), corporate, corporate
+);
