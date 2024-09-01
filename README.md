@@ -28,6 +28,10 @@ npm view @angular/google-maps versions --json
   Garantir que as dependências do Angular do projeto sejam compatíveis com a nova versão do CLI. 
     ng update
 
+criar um tema personalizado
+https://akveo.github.io/nebular/docs/design-system/create-custom-theme#create-custom-theme
+https://akveo.github.io/nebular/docs/design-system/enable-multiple-runtime-themes#enable-multiple-runtime-themes
+https://akveo.github.io/nebular/docs/design-system/create-custom-theme#start-with-basic
 
 # ngx-admin [<img src="https://i.imgur.com/oMcxwZ0.png" alt="Eva Design System" height="20px" />](https://eva.design?utm_campaign=eva_design%20-%20home%20-%20ngx_admin%20github%20readme&utm_source=ngx_admin&utm_medium=referral&utm_content=top_status_tile)
 

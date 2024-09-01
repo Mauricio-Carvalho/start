@@ -86,60 +86,71 @@ $nb-themes: nb-register-theme((
 
   select-min-width: 6rem,
 
-    slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
-    slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
-    slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+  //slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+
+  //Primary Color
+  //color-primary-100: #5a37b8,
+  //color-primary-200: #5a37b8,
+  //color-primary-300: #5a37b8,
+  color-primary-400: #125c41, //Cor para Icones do Radio(Selecionado ao Passar por cima), Select(Selecionado ao Passar por cima)
+  color-primary-500: #34f8a2, //Cor para Icones do Radio(Não Selecionado ao Passar por cima), Cortono do Select, loader, icones(selecionado), menu(selecionado)
+  color-primary-600: #125c41, //Cor para Select (Selecionado),
+  //color-primary-700: #5a37b8,
+  //color-primary-800: #5a37b8,
+  //color-primary-900: #5a37b8,
 
   // Cores básicas
-  color-basic-100: #77af9a, // Cor de fundo : header e sidebar
-  color-basic-200: #77af9a, // Cor para elementos secundários : forms
-  color-basic-300: #125c41, // Cor de fundo leve
-  color-basic-400: #125c41, // Cor de destaque suave : linhas input
-  //color-basic-500: #c7dbeb, // Cor de fundo para elementos destacados
+  color-basic-100: #77af9a, // Cor da letra : Select(selecionado)
+  color-basic-200: #5a37b8, // Cor para elementos secundários : Botöes ao passar por cima
+  color-basic-300: #77af9a, // Cor de fundo : Botöes
+  color-basic-400: #5a37b8, // Cor ao selecionar : Botöes
+  //color-basic-500: #5a37b8, // Cor de fundo para elementos destacados
   color-basic-600: #125c41, // Cor para elementos de foco ou selecionados : label e placeholder
-  //color-basic-700: #4f969e, // Cor primária para botões e links
-  //color-basic-800: #336a77, // Cor para cabeçalhos ou seções destacadas
+  //color-basic-700: #34f8a2, // Cor primária para botões e links
+  //color-basic-800: #125c41, // Cor para cabeçalhos ou seções destacadas : Letras dos Titulos, radio, select
   //color-basic-900: #295c66, // Cor para texto e ícones primários
-  //color-basic-1000: #244555, // Cor para fundo de seções secundárias
-  //color-basic-1100: #121a2b, // Cor de fundo escuro para contraste
-  //
-  //// Cores de fundo
-  //background-basic-color-1: color-basic-700, // Cor de fundo principal
-  //background-basic-color-2: color-basic-800, // Cor de fundo para áreas secundárias
-  //background-basic-color-3: color-basic-900, // Cor de fundo para elementos de destaque
-  //background-basic-color-4: color-basic-100, // Cor de fundo para áreas claras e contrastantes
-  //
-  //// Cores de borda
-  //border-basic-color-1: color-basic-700, // Cor da borda principal
-  //border-basic-color-2: color-basic-800, // Cor da borda para elementos secundários
-  //border-basic-color-3: color-basic-900, // Cor da borda para elementos de destaque
-  //border-basic-color-4: color-basic-1000, // Cor da borda para áreas secundárias
-  //border-basic-color-5: color-basic-1100, // Cor da borda para seções escuras e contrastantes
-  //
-  //// Cores de texto
-  //text-basic-color: color-basic-900, // Cor do texto principal
-  //text-disabled-color: color-basic-500, // Cor do texto desativado
-  //text-primary-color: color-basic-700, // Cor do texto primário para links e elementos interativos
-  //text-secondary-color: color-basic-600, // Cor do texto secundário e informações adicionais
-  //
-  //// Cores de botão
-  //button-background-basic-color: color-basic-700, // Cor de fundo dos botões principais
-  //button-background-hover-color: color-basic-600, // Cor de fundo dos botões ao passar o mouse
-  //button-background-active-color: color-basic-800, // Cor de fundo dos botões quando pressionados
-  //button-text-color: color-basic-100, // Cor do texto dos botões
-  //
-  //// Cores de estado
+  //color-basic-1000: #d00606, // Cor para fundo de seções secundárias
+  //color-basic-1100: #121a2b, // Cor de fundo para contraste
+
+  // Cores de fundo
+  background-basic-color-1: #77af9a, // Cor de fundo principal : header e sidebar
+  background-basic-color-2: #77af9a, // Cor de fundo para áreas secundárias : forms
+  background-basic-color-3: #125c41, // Cor de fundo para elementos de destaque : espaço entre os forms
+  //background-basic-color-4: #125c41, // Cor de fundo para áreas claras e contrastantes
+
+  // Cores de borda
+  //border-basic-color-1: #d00606, // Cor da borda principal
+  //border-basic-color-2: #d00606, // Cor da borda para elementos secundários
+  border-basic-color-3: #34f8a2, // Cor da borda para elementos de destaque : linhas entre menu e cabeçalhos
+  border-basic-color-4: #34f8a2, // Cor da borda para áreas secundárias : linhas do input
+  //border-basic-color-5: #2706d0, // Cor da borda para seções escuras e contrastantes
+
+  // Cores de texto
+  text-basic-color: #125c41, // Cor do texto principal : Menu, titulos do form, radio, select
+  //text-disabled-color: #2706d0, // Cor do texto desativado
+  //text-primary-color: #2706d0, // Cor do texto primário para links e elementos interativos
+  //text-secondary-color: #2706d0, // Cor do texto secundário e informações adicionais
+
+  // Cores de botão
+  //button-background-basic-color: #d00606, // Cor de fundo dos botões principais
+  //button-background-hover-color: #d00606, // Cor de fundo dos botões ao passar o mouse
+  //button-background-active-color: #d00606, // Cor de fundo dos botões quando pressionados
+  //button-text-color: #d00606, // Cor do texto dos botões
+
+  // Cores de estado
   //status-success-color: #4CAF50, // Cor para estados de sucesso (verde)
   //status-info-color: #2196F3, // Cor para estados de informação (azul)
   //status-warning-color: #FFC107, // Cor para estados de aviso (amarelo)
   //status-danger-color: #F44336, // Cor para estados de erro (vermelho)
-  //
-  //// Cores de input
-  //input-background-color: color-basic-100, // Cor de fundo dos campos de entrada
-  //input-border-color: color-basic-600, // Cor da borda dos campos de entrada
-  //input-placeholder-color: color-basic-400, // Cor do texto de placeholder
-  //
-  //// Cores de badge
+
+  // Cores de input
+  //input-background-color: #2706d0, // Cor de fundo dos campos de entrada
+  //input-border-color: #2706d0, // Cor da borda dos campos de entrada
+  //input-placeholder-color: #2706d0, // Cor do texto de placeholder
+
+  // Cores de badge
   //badge-primary-background-color: color-basic-700, // Cor de fundo para badges primários
   //badge-primary-text-color: color-basic-100, // Cor do texto para badges primários
   //badge-success-background-color: #4CAF50, // Cor de fundo para badges de sucesso
