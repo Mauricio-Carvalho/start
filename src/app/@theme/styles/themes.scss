@@ -4,7 +4,7 @@
 @use '@nebular/theme/styles/theming' as *;
 @use '@nebular/theme/styles/themes/dark';
 @use '@nebular/theme/styles/themes/default';
-@use '@nebular/theme/styles/themes/cosmic';
+//@use '@nebular/theme/styles/themes/cosmic';
 @use '@nebular/theme/styles/themes/corporate';
 
 $nb-themes: nb-register-theme((
@@ -28,27 +28,6 @@ $nb-themes: nb-register-theme((
   slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
 ), default, default);
 
-$nb-themes: nb-register-theme((
-  layout-padding-top: 2.25rem,
-
-  menu-item-icon-margin: 0 0.5rem 0 0,
-
-  card-height-tiny: 13.5rem,
-  card-height-small: 21.1875rem,
-  card-height-medium: 28.875rem,
-  card-height-large: 36.5625rem,
-  card-height-giant: 44.25rem,
-  card-margin-bottom: 1.875rem,
-  card-header-with-select-padding-top: 0.5rem,
-  card-header-with-select-padding-bottom: 0.5rem,
-
-  select-min-width: 6rem,
-
-  slide-out-background: #252547,
-  slide-out-shadow-color: 2px 0 3px #29157a,
-  slide-out-shadow-color-rtl: -2px 0 3px #29157a,
-), cosmic, cosmic);
-
 //$nb-themes: nb-register-theme((
 //  layout-padding-top: 2.25rem,
 //
@@ -65,10 +44,10 @@ $nb-themes: nb-register-theme((
 //
 //  select-min-width: 6rem,
 //
-//  slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
-//  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
-//  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
-//), corporate, corporate);
+//  slide-out-background: #252547,
+//  slide-out-shadow-color: 2px 0 3px #29157a,
+//  slide-out-shadow-color-rtl: -2px 0 3px #29157a,
+//), cosmic, cosmic);
 
 $nb-themes: nb-register-theme((
   layout-padding-top: 2.25rem,
@@ -107,13 +86,17 @@ $nb-themes: nb-register-theme((
 
   select-min-width: 6rem,
 
+    slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
+    slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+    slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+
   // Cores básicas
-  color-basic-100: #77AF9A, // Cor de fundo : header e sidebar
-  color-basic-200: #77AF9A, // Cor para elementos secundários : forms
-  color-basic-300: #125C41, // Cor de fundo leve
-  color-basic-400: #125C41, // Cor de destaque suave : linhas input
+  color-basic-100: #77af9a, // Cor de fundo : header e sidebar
+  color-basic-200: #77af9a, // Cor para elementos secundários : forms
+  color-basic-300: #125c41, // Cor de fundo leve
+  color-basic-400: #125c41, // Cor de destaque suave : linhas input
   //color-basic-500: #c7dbeb, // Cor de fundo para elementos destacados
-  color-basic-600: #125C41, // Cor para elementos de foco ou selecionados : label e placeholder
+  color-basic-600: #125c41, // Cor para elementos de foco ou selecionados : label e placeholder
   //color-basic-700: #4f969e, // Cor primária para botões e links
   //color-basic-800: #336a77, // Cor para cabeçalhos ou seções destacadas
   //color-basic-900: #295c66, // Cor para texto e ícones primários
@@ -164,5 +147,4 @@ $nb-themes: nb-register-theme((
   //badge-danger-background-color: #F44336, // Cor de fundo para badges de erro
   //badge-danger-text-color: color-basic-100, // Cor do texto para badges de erro
 
-), corporate, corporate
-);
+), corporate, corporate);
