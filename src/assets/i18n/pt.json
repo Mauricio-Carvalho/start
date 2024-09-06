@@ -1,4 +1,22 @@
 {
+  "menu": {
+    "title": "Menu",
+    "list": {
+      "tables": {
+        "title": "Tabelas & Dados",
+        "user": "Usuário",
+        "supply": "Abastecimento",
+        "machine": "Máquinas"
+      },
+      "auth": {
+        "title": "Autenticação",
+        "login": "Login",
+        "register": "Registrar",
+        "request-password": "Request Senha",
+        "reset-password": "Reset Senha"
+      }
+    }
+  },
   "header": {
     "profile": "Perfil",
     "log_out": "Sair"
@@ -54,5 +72,17 @@
       "manager": "Gerente",
       "employee": "Funcionário"
     }
+  },
+  "user": {
+    "title": "Tabela Usuário",
+    "table": {
+      "id": "ID",
+      "first_name": "Primeiro Nome",
+      "last_name": "Último Nome",
+      "username": "Username",
+      "email": "Email",
+      "age": "Idade"
+    },
+    "confirm_delete": "Tem certeza de que deseja excluir?"
   }
 }

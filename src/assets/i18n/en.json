@@ -1,4 +1,22 @@
 {
+  "menu": {
+    "title": "Menu",
+    "list": {
+      "tables": {
+        "title": "Tables & Data",
+        "user": "User",
+        "supply": "Supply",
+        "machine": "Machines"
+      },
+      "auth": {
+        "title": "Authentication",
+        "login": "Login",
+        "register": "Register",
+        "request-password": "Request Password",
+        "reset-password": "Reset Password"
+      }
+    }
+  },
   "header": {
     "profile": "Profile",
     "log_out": "Log Out"
@@ -54,5 +72,17 @@
       "manager": "Manager",
       "employee": "Employee"
     }
+  },
+  "user": {
+    "title": "User Table",
+    "table": {
+      "id": "ID",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "username": "Username",
+      "email": "Email",
+      "age": "Age"
+    },
+    "confirm_delete": "Are you sure you want to delete?"
   }
 }

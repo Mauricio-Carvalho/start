@@ -1,4 +1,22 @@
 {
+  "menu": {
+    "title": "Menú",
+    "list": {
+      "tables": {
+        "title": "Tablas & Datos",
+        "user": "Usuario",
+        "supply": "Abastecimiento",
+        "machine": "Máquinas"
+      },
+      "auth": {
+        "title": "Autenticación",
+        "login": "Iniciar Sesión",
+        "register": "Registrar",
+        "request-password": "Solicitar Contraseña",
+        "reset-password": "Restablecer Contraseña"
+      }
+    }
+  },
   "header": {
     "profile": "Perfil",
     "log_out": "Cerrar Sesión"
@@ -54,5 +72,17 @@
       "manager": "Gerente",
       "employee": "Empleado"
     }
+  },
+  "user": {
+    "title": "Tabla de Usuario",
+    "table": {
+      "id": "ID",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "username": "Nombre de Usuario",
+      "email": "Correo Electrónico",
+      "age": "Edad"
+    },
+    "confirm_delete": "¿Estás seguro de que deseas eliminar?"
   }
 }

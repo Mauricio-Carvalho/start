@@ -1,7 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService} from '@nebular/theme';
 import { TranslateService } from '@ngx-translate/core';
-import { Router } from '@angular/router';
 
 import { UserData } from '../../@core/data/users';
 import { LayoutService } from '../../@core/utils';
